@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}
+add post
+{% endblock title %}
+{% block head %}
+<script src = "https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+{% endblock head %}
+
+{% block body %}
+<div class="container my-3">
+    <form action = "{% url 'question-form' %}" method="post">
+
+        <div class="form-group">
+            <label for="title" id="Title">Title</label>
+            <input type="text" class="form-control" id="title" name="title"/>
+            
+        </div>
+        {% csrf_token %}
+        <div class="form-group">
+            {% comment %} <label for="content" id="content">Content</label> {% endcomment %}
+            
+            <textarea name="content"></textarea>
+            <script type = 'text/javascript'>
+                CKEDITOR.replace("content")
+            </script>
+        </div>
+        
+        <button type="submit" class="btn btn-primary my-1" id='contact-button'>Post</button>
+    </form>
+</div>
+{% endblock body %}

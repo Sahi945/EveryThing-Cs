@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="{% static 'questionHome.css' %}">
+{% endblock head %}
+{% block title %}Doubts
+{% endblock title %}
+{% load static %}
+
+{% block doubtactive %}active
+{% endblock doubtactive %}
+
+{% block body %}
+<div class="container my-2 mb-4">
+
+{% if user.is_authenticated %}
+<div class=" mb-5 ml-5">
+    <a class = "btn btn-primary" href="/doubts/ask-question-page" id = "askQ"><span>+ Ask Question </span></a>
+    </div>
+</div>
+
+<div class="container  mt-5">
+<div id = 'question-bank'>
+    
+    {% for ques in allques %}
+    <div class="card my-4" id = "card">
+        <div class="card-body" >
+            <h4>{{ques.title}}</h4>
+           
+             <img src="/static/images/avatar.svg" height = "60px" alt=""><p>{{ques.author}}</p>
+                <a class = " btn btn-primary float-right" href="/doubts/{{ques.slug}}" id= "post-button">view</a>
+        </div>
+    </div>
+    {% endfor %}
+
+{% else %}
+<div class="container  mt-5">
+<div id = 'question-bank'>
+    
+    {% for ques in allques %}
+    <div class="card my-4" id = "card">
+        <div class="card-body" >
+            <h4>{{ques.title}}</h4>
+           
+             <img src="/static/images/avatar.svg" height = "60px" alt=""><p>{{ques.author}}</p>
+                <a class = " btn btn-primary float-right" href="/doubts/{{ques.slug}}" id= "post-button">view</a>
+        </div>
+    </div>
+    {% endfor %}
+{% endif %}
+
+</div>
+</div>
+
+
+
+{% endblock body %}

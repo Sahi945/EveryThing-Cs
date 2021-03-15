@@ -1,0 +1,20 @@
+#comment
+{
+    background:green;
+    border-radius: 20px;
+}
+
+#comment-section
+{
+    background: #000;
+}
+
+#comment-text
+{
+    border-radius: 20px;
+}
+
+.jumbotron
+{
+    background: rgba(0,0,0,.3) !important;
+}

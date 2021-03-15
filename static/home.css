@@ -1,0 +1,57 @@
+.body
+{
+    background: url("/static/images/vector-purple.jpg");
+}
+
+.custom_class
+{
+    font-style: normal !important;
+}
+
+#jumbo
+{
+    background-image: url("/static/images/vector-purple.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: hue;
+    border-radius: 50px;
+    text-align: center;
+    color: rgb(245, 245, 245) !important;
+    font-family: 'Poppins', sans-serif;    
+}
+
+#welcome-home
+{
+    margin-top: 20%;
+  
+    text-align: center ;
+    color: white;
+    font-size: 30px;
+    padding: 5.4%;
+}
+
+#heading
+{
+    font-size: 60px;
+}
+
+#blog-button, #doubt-button
+{
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgb(194, 20, 194);
+    border-color: white;
+}
+
+#blog-button:hover, #doubt-button:hover
+{
+    background-color: rgb(98, 3, 98);
+}
+
+.contact-container
+{
+    background: rgba(0, 0, 0, 0.4);
+    padding-bottom: 20px;
+
+}

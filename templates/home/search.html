@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'blogHome.css' %}">
+{% endblock head %}
+{% block title %}
+results
+{% endblock title %}
+
+{% block body %}
+
+<div class="contact-container">
+  <h2 class="text-center my-4" style="color: azure;">Blog Results({{allposts.count}})</h2>
+  <div class="container">
+    {% for post in allposts %}
+    <div class="col-md-12">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+        id='abc'>
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary"><img src="/static/images/avatar.svg" alt="" height="60px"
+              style="margin-right: 15px;">{{post.author}}</strong>
+          <h3 class="mb-0">{{post.title}}</h3>
+          <div class="mb-1 text-muted">{{post.timeStamp|timesince}} ago</div>
+          <p class="card-text mb-auto">{{post.content|truncatechars:200|safe}}</p>
+          <div class="my-2">
+            <a href="/blog/{{post.slug}}" role="button" class="btn btn-primary">More..</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+
+
+<div class="contact-container">
+  
+  <h2 class="text-center my-4" style="color: azure;">Questions Results({{allquest.count}})</h2>
+  <div class="container">
+    {% for post in allquest %}
+    <div class="col-md-12">
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+        id='abc'>
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary"><img src="/static/images/avatar.svg" alt="" height="60px"
+              style="margin-right: 15px;">{{post.author}}</strong>
+          <h3 class="mb-0">{{post.title}}</h3>
+          <div class="mb-1 text-muted">{{post.timeStamp|timesince}} ago</div>
+          <p class="card-text mb-auto">{{post.content|truncatechars:200|safe}}</p>
+          <div class="my-2">
+            <a href="/blog/{{post.slug}}" role="button" class="btn btn-primary">More..</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+
+{% endblock body %}

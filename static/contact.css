@@ -1,0 +1,68 @@
+.body
+{
+    background-image: url(/static/images/vector-purple-wolf.jpg) !important;
+}
+
+#contact
+{
+    width: 300px !important;
+    height: 300px !important;
+    float: right !important;
+    margin-top: 180px;
+    opacity: 70%;
+}
+
+h2
+{
+    color:white;
+    
+}
+
+#contact-button
+{
+    background:rgb(3, 56, 200) !important;
+    border-width: 2px;
+    border-radius: 50px;
+    
+}
+
+#contact-button::after
+{
+   
+}
+
+#contact-button:hover
+{
+    background:rgb(20, 163, 9) !important;
+    padding: 9px;
+    content: ">>";
+}
+
+#Name
+{
+    color: white;
+    font-size: 20px;
+    
+}
+#phone
+{
+    color: white;
+    font-size: 20px;
+}
+#email
+{
+    color: white;
+    font-size: 20px;
+}
+#content
+{
+    color: white;
+    font-size: 20px;
+}
+
+.contact-container
+{
+    background: rgba(0, 0, 0, 0.2);
+    padding: 3%;
+    border-radius: 20px;
+}

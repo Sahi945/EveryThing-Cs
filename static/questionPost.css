@@ -1,0 +1,18 @@
+#answer-box
+{
+    padding: 20px;
+    border-radius: 30px !important;
+    border-color: black !important;
+    border-width: 20px !important;
+    background-color: burlywood;
+    
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#author
+{
+    margin-left: 90%;
+    margin-bottom: 10px;
+
+}

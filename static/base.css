@@ -1,0 +1,96 @@
+/* *{
+    padding: 0;
+    margin: 0;
+}
+
+body
+{
+    background: url(/static/images/green.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+    
+}
+
+ .jumbotron
+{
+    background-color:transparent;
+    border-color: #66fcf1;
+   
+    
+    
+}
+
+.jumbotron .border
+{
+    border-color: teal;
+}
+
+.jumbotron h1
+{
+    color: #66fcf1;
+    text-align: center;
+}
+
+.jumbotron p{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+ */
+
+
+body{
+    margin: 0px !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1em !important;
+    background:url("/static/images/vector-purple.jpg");
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-size: cover;
+  
+    
+    
+    /* background:rgba(132, 0, 255, 0.5) !important; */
+}
+
+.wave{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+    z-index: -1;
+    opacity: 70%;
+}
+
+#logo
+{
+    width: 50px !important; 
+    height: 50px !important;
+}
+
+.btn
+{
+    border-radius: 50px !important;
+    
+    
+}
+
+/* #dropdown-box
+{
+    margin-left: 0%;
+    padding: 0%;
+} */
+
+/* #addblog-link
+{
+    margin: 0%;
+    padding:0%;
+} */
+
+#user-button
+{
+    margin-left: 10px;
+}

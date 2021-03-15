@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock title %}
+{% load static %}
+{% block head %}
+<link rel="stylesheet" href="https://use.typekit.net/pev2rvl.css">
+<script src="{% static 'javascript/doubt_click.js' %}"></script>
+<link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock head %}
+
+
+
+{% block homeactive %}active
+{% endblock homeactive %}
+
+{% block body %}
+
+<div class="contact-container">
+<div class="container my-4 ">
+  <div id = 'welcome-home'>
+    <h1 id= 'heading'>Welcome to EverythingCs</h1>
+    <p>One place for all you coding doubts</p>
+   
+
+      <a href="/blog"><button class="btn btn-primary mt-4 mr-3 pl-3 pr-3" id = 'blog-button'>Blogs</button></a>
+      
+      <a href="{% url 'all-questions' %}"><button class="btn btn-primary mt-4" id = 'doubt-button'>Doubts?</button></a>
+   </div>   
+</div>
+</div>
+
+
+{% comment %} 
+<div class="container">
+<div class="card-deck">
+{% for post in top_posts %}
+  <div class="card">
+    
+    <img src="{{post.thumbnail.url}}" class="card-img-top" alt="..." height = '400px' width = '500px'>
+   
+    
+    
+    <div class="card-body">
+      <h5 class="card-title">{{post.title|truncatechars:14|safe}}</h5>
+      <p class="custom_class card-text text-justify">{{post.content|truncatechars:190|safe}}</p>
+      <br>
+      <p class="card-text"><small class="text-muted">{{post.timeStamp|timesince}}</small></p>
+      <div>
+      <a href="/blog/{{post.slug}}" class="btn btn-primary">ReadMore</a>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
+</div> {% endcomment %}
+
+  <!--this block is to display latest 3 questoins-->
+
+
+
+
+  {%endblock body %}
